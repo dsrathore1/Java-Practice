@@ -10,11 +10,12 @@ public class _5FifthDay {
 
         int a = scan.nextInt();
         double d = scan.nextDouble();
-        String s = scan.next();
+        scan.nextLine();
+        String s = scan.nextLine();
+        scan.close();
 
-        System.out.println("my integer :- " + a);
-        System.out.println("my integer :- " + d);
-        System.out.println("my integer :- " + s);
-
+        System.out.println("String: " + s);
+        System.out.println("Double: " + d);
+        System.out.println("Int: " + a);
     }
 }
