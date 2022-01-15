@@ -1,8 +1,8 @@
-package com.company;
+package com.company._10TenthDay;
 
 import java.util.Arrays;
 
-public class _10TenthDay {
+public class Swapping {
     public static void main(String[] args) {
         // Swap the array element
         int[] arr = {1, 3, 5, 6, 35, 26, 64};
