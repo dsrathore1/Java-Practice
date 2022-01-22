@@ -29,17 +29,44 @@ class FindMinMax {
             int temp = arr1[i];
             int j = i;
             while (j > 0 && arr1[j - 1] < temp) {
-                arr1[j - 1] = arr1[j];
+                arr1[j] = arr1[j - 1];
                 j = j - 1;
             }
             arr1[j] = temp;
         }
 
-        for (int k : arr1) {
-            System.out.print(k + " ");
-        }
-    }
 
+        System.out.println("Your array after insertion sort");
+        // Print the array
+        for (int l : arr1) {
+            System.out.print(l + " ");
+        }
+
+        // Reverse order of the array
+        System.out.println("\n\nReverse order of the array");
+        for (int i = arr1.length - 1; i >= 0; i--) {
+            System.out.print(arr1[i] + " ");
+        }
+        System.out.println("\n\nYour maximum value of the array is :- " + arr1[0]);
+        // Finding the minimum value with bubble sort
+        for (int i = 0; i < arr1.length - 1; i++) {
+            for (int j = 0; j < arr1.length - i - 1; j++) {
+                if (arr1[j] > arr1[j + 1]) {
+                    int temp = arr1[j];
+                    arr1[j] = arr1[j + 1];
+                    arr1[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println("\nYour array after bubble sort");
+        for (int l : arr1) {
+            System.out.print(l + " ");
+        }
+
+        System.out.println("\n\nYour minimum value of the array is :- " + arr1[0]);
+
+    }
 }
 
 /*
