@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class _14FourteenDay {
+public class _14FourteenthDay {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
