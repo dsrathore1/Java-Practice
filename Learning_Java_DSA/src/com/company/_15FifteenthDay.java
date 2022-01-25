@@ -1,6 +1,6 @@
 package com.company;
 
-public class _15FifteenDay {
+public class _15FifteenthDay {
     public static void main(String[] args) {
         // Insertion Sort
         int[] a = {2, 15, 6, 8, 12, 87, 1};
