@@ -2,41 +2,54 @@ package com.company;
 
 public class _16SixteenthDay {
     public static void main(String[] args) {
-        // Reverse the array
+        int[] a = {9, 18, 7, 26, 5, 4, 35};
 
-        int[] a = {9, 8, 7, 6, 5, 4, 3};
+        //* Functions
+        reverseTheArray(a); //* Reverse the array
+        System.out.println("\n");
+        findMaxMin(a); //* Finding the Maximum and minimum value into the Array
+    }
 
+    //! Reverse the array
+    static void reverseTheArray(int[] a) {
         for (int i = a.length - 1; i >= 0; i--) {
             System.out.print(a[i] + " ");
         }
 
     }
-}
 
-
-class MaxMin {
-    public static void main(String[] args) {
-        //Maximum and minimum of an array using minimum number of comparisons
-        int[] b = {9, 88, 7, 16, 5, 4, 3};
-//
-//        System.out.println("Your Array is :-");
-//        for (int i : b) {
-//            System.out.print(i + " ");
-//        }
-
-        // Bubble sort
-        for (int i = 0; i < b.length - 1; i++) {
-            for (int j = 0; j < b.length - i - 1; j++) {
-                if (b[j] < b[j + 1]) {
-                    int temp = b[j];
-                    b[j] = b[j + 1];
-                    b[j + 1] = temp;
+    static void findMaxMin(int[] a) {
+        //! Bubble sort
+        for (int i = 0; i < a.length - 1; i++) {
+            for (int j = 0; j < a.length - i - 1; j++) {
+                if (a[j] < a[j + 1]) {
+                    int temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
                 }
             }
         }
-        for (int k : b) {
+        System.out.println("Descending ordered sorted array is :- ");
+        for (int k : a) {
             System.out.print(k + " ");
         }
-        System.out.println("\nYour Maximum number is :- " + b[0]);
+        System.out.println("\nYour Maximum number is :- " + a[0]);
+
+        //! Insertion sort
+        for (int k = 0; k < a.length; k++) {
+            int temp, j;
+            temp = a[k];
+            j = k;
+            while (j > 0 && a[j - 1] > temp) {
+                a[j] = a[j - 1];
+                j = j - 1;
+            }
+            a[j] = temp;
+        }
+        System.out.println("\nAscending ordered sorted array is :- ");
+        for (int l : a) {
+            System.out.print(l + " ");
+        }
+        System.out.println("\nYour Minimum number is :- " + a[0]);
     }
 }
