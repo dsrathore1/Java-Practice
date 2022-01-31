@@ -1,4 +1,4 @@
-package com.company._20TwentythDay;
+package com.company._20TwentiethDay;
 
 public class CeilingNumber {
     public static void main(String[] args) {
