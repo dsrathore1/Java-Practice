@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class _17SeventeenthDay {
@@ -25,7 +26,8 @@ public class _17SeventeenthDay {
         int end = 5;
         System.out.println("\nYour target is present on index :- " + range(num, target2, start, end) + "\tBetween " + start + " to " + end);
 
-
+        //! Find the max and min number in array using linear search
+        findMaxMin(num);
     }
 
     //* search in the array : return the index if item found
@@ -66,6 +68,9 @@ public class _17SeventeenthDay {
 
     //* Finding the maximum and minimum element into the array with Linear Search
     static void findMaxMin(int[] arr) {
+        Arrays.sort(arr);
 
+        System.out.println("Min :- " + arr[0]);
+        System.out.println("Max :- " + arr.length);
     }
 }
