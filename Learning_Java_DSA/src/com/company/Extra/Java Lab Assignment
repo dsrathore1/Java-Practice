@@ -1,0 +1,266 @@
+Name :- Digpal Singh Rathore
+Branch :- Computer Science      Batch :- CS1
+Year :- 3rd Year        Semester :- 5th Sem
+Roll No. :- 19/485      University Roll No. :- 19EUCCS017
+
+				/* Java Lab Assignment */
+
+1. For a class bank you have to define two attributes i.e bank Id and its location of the class bank need to display in a program
+
+package com.company.Assignments;
+
+public class Assignment1 {
+    public static void main(String[] args) {
+  Scanner sc = new Scanner(System.in);
+
+  System.out.print("Enter the number of Banks: ");
+  int n = sc.nextInt();
+
+  Bank[] b = new Bank[n];
+
+  for (int i = 0; i < n; i++) {
+   System.out.print("Enter the Bank Id and Location of Bank " + (i+1) + " : ");
+   int bank_id = sc.nextInt();
+   String location = sc.nextLine();
+   b[i] = new Bank(bank_id, location);
+  }
+
+  System.out.print("Enter the Bank Id to find the Location: ");
+  int b_id = sc.nextInt();
+  boolean bank_found = false;
+  for (int i = 0; i < n; i++) {
+   if (b_id == b[i].bank_id) {
+    System.out.println("Location is: " + b[i].location);
+    bank_found = true;
+   }
+  }
+  if (!bank_found) {
+   System.out.println("Bank not found!");
+  }
+
+  sc.close();
+ }
+
+}
+
+class Bank {
+ int bank_id = 0;
+ String location = "";
+
+ Bank (int bank_id, String location) {
+  this.bank_id = bank_id;
+  this.location = location;
+ }
+}
+
+2. Bubble Sort
+
+public class Assignment2 {
+    public static void main(String[] args) {
+        int[] a = {2, 4, 1, 65, 25, 24, 77, 88};
+        ascendingOrder(a);
+    }
+
+    static void ascendingOrder(int[] a) {
+        for (int i = 0; i < a.length - 1; i++) {
+            for (int j = 0; j < a.length - i - 1; j++) {
+                if (a[j] > a[j + 1]) {
+                    int temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println("Bubble Sort :- ");
+        for (int k : a) {
+            System.out.print(k + " ");
+        }
+    }
+}
+
+
+
+3.
+   package com.company.Assignments;
+
+   public class Assignment3 {
+       public static void main(String[] args) {
+
+    public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+
+     System.out.print("Enter the size of Array: ");
+     int n = sc.nextInt();
+     int[] arr = new int[n];
+
+     for (int i = 0; i < n; i++)
+      arr[i] = sc.nextInt();
+
+     for (int j = 0; j < n-1; j++) {
+      for (int k = 0; k < n-j-1; k++) {
+       if (arr[k] > arr[k+1]) {
+        int temp = arr[k];
+        arr[k] = arr[k+1];
+        arr[k+1] = temp;
+       }
+      }
+     }
+
+     for (int i = 0; i < n; i++)
+      System.out.print(arr[i] + " ");
+
+     sc.close();
+    }
+   }
+
+
+4. Write a java  program ,create a class named person/people having attributes "name","address","age" and a method display to "display" these attributes. Then make a another class Customer extending person class having some attributes and a method "display" to print these attributes.(method overriding)
+
+class Person {
+ String name;
+ String address;
+ int age;
+
+ void displayDetails() {
+  System.out.println("Name: " + name);
+  System.out.println("Address: " + address);
+  System.out.println("Age: " + age);
+ }
+}
+
+class Customer extends Person {
+ int customer_id;
+ int items_bought;
+
+ void displayDetails() {
+  System.out.println("Name: " + name);
+  System.out.println("Customer ID: " + customer_id);
+  System.out.println("Number of Items Bought: " + items_bought);
+ }
+}
+
+public class classwork3 {
+
+ public static void main(String[] args) {
+  Customer customer = new Customer();
+  customer.name = "Digpal Singh Rathore";
+  customer.address = "ABC";
+  customer.age = 21;
+  customer.customer_id = 1;
+  customer.items_bought = 10;
+  customer.displayDetails();
+ }
+
+}
+
+5.//? Create an abstract class shape. Let rectangle and triangle inherit this shape class. Add necessary functions.
+
+abstract class Shape {
+    abstract void draw(); //! Abstract draw method
+
+    abstract float area(float a, float b); //! Abstract perimeter method
+}
+
+//! Triangle Class extends from Shape Class
+class Triangle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Triangle is drawn");
+    }
+
+    @Override
+    float area(float a, float b) {
+        return ((a * b) / 2);
+    }
+}
+
+
+//! Rectangle Class extends from Shape Class
+class Rectangle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Rectangle is drawn");
+    }
+
+    @Override
+    float area(float a, float b) {
+        return ((a * b));
+    }
+}
+
+public class AbstractClass { //! Class containing main method
+    public static void main(String[] args) {
+        Triangle tri = new Triangle();
+        Rectangle rec = new Rectangle();
+
+        //! Call the Draw method by object
+        tri.draw();
+        rec.draw();
+
+
+        //! Call the Perimeter method by object using parameters
+        float firstPara = 3; //! Parameter First
+        float secondPara = 3; //! Parameter Second
+
+        float areaOfTriangle = tri.area(firstPara, secondPara);
+        float areaOfRectangle = rec.area(firstPara, secondPara);
+
+        System.out.println("Area of Rectangle is = " + areaOfRectangle);
+        System.out.println("Area of Triangle is = " + areaOfTriangle);
+    }
+}
+
+6. //? Write an application that executes two threads. One thread displays "Thread1" every 1000 milliseconds & another thread displays "Thread2" every 3000 milliseconds. Create the threads by implementing the Runnable interface
+
+import java.util.Objects;
+
+class ThreadExample extends Thread {
+    ThreadExample(String s) {
+        super(s);
+        start();
+    }
+
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println(Thread.currentThread().getName());
+            try {
+                if (Objects.equals(Thread.currentThread().getName(), "Thread1")) {
+                    Thread.sleep(1000);
+                } else {
+                    Thread.sleep(3000);
+                }
+            } catch (Exception ignored) {
+            }
+        }
+    }
+}
+
+class TwoThread {
+    public static void main(String[] arg) {
+        System.out.println("Thread name : " + Thread.currentThread().getName());
+        new ThreadExample("Thread1");
+        new ThreadExample("Thread2");
+    }
+}
+
+7. //? Write a program to swap two values using object reference. Your program should have a swap function
+
+class Operation1 {
+    int a = 4;
+    int b = 9;
+
+    void swap(Operation1 op1) {
+        System.out.println("Before swap value of a = " + op1.a + " value b = " + op1.b);
+        int temp = op1.a;
+        op1.a = op1.b;
+        op1.b = temp;
+        System.out.println("After swap value of a = " + op1.a + " value b = " + op1.b);
+    }
+}
+
+public class SwapTheTwoValues {
+    public static void main(String[] args) { //! Class containing main method
+        Operation1 op2 = new Operation1();
+        op2.swap(op2);
+    }
+}

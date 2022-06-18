@@ -33,6 +33,10 @@ public class RecursionBasics {
         int[] a = {1, 4, 6, 7, 34, 67, 78};
         int target = 34;
         System.out.println(search(a, target, 0, a.length - 1));
+
+        //* Effective way
+        Solution s = new Solution();
+        s.fib(4);
     }
 
     static int fib(int n) {
@@ -56,5 +60,17 @@ public class RecursionBasics {
         }
         return search(a, target, mid + 1, end);
     }
+}
 
+
+class Solution {
+
+    int[] visited = new int[31];
+
+    public int fib(int n) {
+        if (n < 2) return n;
+        if (visited[n] == 0) visited[n] = fib(n - 1) + fib(n - 2);
+
+        return visited[n];
+    }
 }
