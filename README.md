@@ -8,17 +8,18 @@ I am learning Java and practicing DSA with `JAVA`, I hope I'll regular with my c
 
 
 ## DSA Learning Content
-1. Array
+1. Array ✅
 3. Recursion
 4. Searching
-    - Linear Search
-    - Binary Search
+    - Linear Search ✅
+    - Binary Search ✅
     - Jump Search
     - Interpolation Search
     - Expontential Search
     - Sublist Search
 6. Backtracking
-7. Stack & Queue
+
+8. Stack & Queue
    - Push
    - Pull
    - Delete
@@ -26,7 +27,10 @@ I am learning Java and practicing DSA with `JAVA`, I hope I'll regular with my c
    - Dequeue
    
 9. Linked List
-10. Tree
+    - Singly Linked List
+    - Doubly Linked List
+    - Circular Linked List
+11. Tree
     - Binary Tree
     - Binary Search Tree
     - AVL Tree
@@ -39,6 +43,8 @@ I am learning Java and practicing DSA with `JAVA`, I hope I'll regular with my c
     - Bubble Sort
     - Radix/Counting/bucket sort
     - Selection Sort
+    - Cyclic Sort
+    - Tim Sort
 14. String
 15. Heap
 16. Hashing
@@ -47,3 +53,14 @@ I am learning Java and practicing DSA with `JAVA`, I hope I'll regular with my c
 19. Dynamic Programming
 20. Trie
 21. Segment Tree
+
+
+***
+
+# Day 1️⃣:-
+
+## Binary Search Questions
+
+[Guess the Number](https://leetcode.com/problems/guess-number-higher-or-lower/)
+
+[Binary Search](https://leetcode.com/problems/binary-search/)
