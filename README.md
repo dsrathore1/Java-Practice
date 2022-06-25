@@ -64,3 +64,6 @@ I am learning Java and practicing DSA with `JAVA`, I hope I'll regular with my c
 [Guess the Number](https://leetcode.com/problems/guess-number-higher-or-lower/)
 
 [Binary Search](https://leetcode.com/problems/binary-search/)
+
+# Day 2️⃣:-
+
