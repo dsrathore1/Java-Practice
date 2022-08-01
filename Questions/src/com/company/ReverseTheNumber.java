@@ -13,10 +13,14 @@ public class ReverseTheNumber {
 
         while (start < end) {
             temp = arr[start];
-            arr[start] = arr[end];
-            arr[end] = temp;
-            start++;
-            end--;
+//            arr[start] = arr[end];
+//            arr[end] = temp;
+//            start++;
+//            end--;
+
+            //! Optimize way
+            arr[start++] = arr[end];
+            arr[end--] = temp;
         }
         for (int j : arr) {
             System.out.print(j + " ");

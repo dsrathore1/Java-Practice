@@ -11,6 +11,7 @@ public class _27TwentySeventhDay {
     static int lastAndFirstOccurrence(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
+        int res = -1;
         while (start <= end) {
             int mid = start + (end - start) / 2;
             if (target < arr[mid]) {
@@ -18,14 +19,11 @@ public class _27TwentySeventhDay {
             } else if (target > arr[mid]) {
                 start = mid + 1;
             } else {
-                if (target == arr[mid] - 1) {
-                    end = mid - 1;
-                } else {
-                    return mid;
-                }
+                res = mid;
+                end = res - 1;
             }
         }
         System.out.println("Target is not found in array :- ");
-        return -1;
+        return res;
     }
 }
