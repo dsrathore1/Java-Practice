@@ -37,7 +37,7 @@ public class LLPractice {
         } while (n == 1);
     }
 
-    public void transverse() {
+    public void traverse() {
         Node temp = head;
         if (head == null) {
             System.out.println("LL is not exists");
@@ -53,6 +53,6 @@ public class LLPractice {
     public static void main(String[] args) {
         LLPractice ll = new LLPractice();
         ll.creation();
-        ll.transverse();
+        ll.traverse();
     }
 }
