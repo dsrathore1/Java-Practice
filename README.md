@@ -48,9 +48,11 @@ I am learning Java and practicing DSA with `JAVA`, I hope I'll regular with my c
 14. String
 15. Heap
 16. Hashing 
-    - HashSet ✅
-    - HashTable ✅
-    - HashMap ✅
+    - Time Complexity
+    - Hash Table
+    - Hash Function
+    - Key Collision
+    
 17. Graph
 18. Greedy
 19. Dynamic Programming
@@ -70,8 +72,8 @@ I am learning Java and practicing DSA with `JAVA`, I hope I'll regular with my c
 # Day 2️⃣:-
 
 ## Hash Questions
-[Distinct by hashing](https://github.com/dsrathore1/Java-Practice/blob/main/Learning_Java_DSA/src/com/company/Extra/Hashing_Practice/DistinctByHashing.java)
+[Distinct by hashing using HashSet](https://github.com/dsrathore1/Java-Practice/blob/main/Learning_Java_DSA/src/com/company/Extra/Hashing_Practice/DistinctByHashing.java)
 
-[Intersection of two array](https://github.com/dsrathore1/Java-Practice/blob/main/Learning_Java_DSA/src/com/company/Extra/Hashing_Practice/IntersectionOfTwoArray.java)
+[Intersection of two array using HashSet](https://github.com/dsrathore1/Java-Practice/blob/main/Learning_Java_DSA/src/com/company/Extra/Hashing_Practice/IntersectionOfTwoArray.java)
 
-[Union of two array](https://github.com/dsrathore1/Java-Practice/blob/main/Learning_Java_DSA/src/com/company/Extra/Hashing_Practice/UnionOfTwoArray.java)
+[Union of two array using HashSet](https://github.com/dsrathore1/Java-Practice/blob/main/Learning_Java_DSA/src/com/company/Extra/Hashing_Practice/UnionOfTwoArray.java)
