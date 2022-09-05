@@ -1,4 +1,4 @@
-package com.company._34ThirtyFourDay;
+package com.company._34ThirtyFour;
 
 import java.util.HashMap;
 import java.util.Map;
