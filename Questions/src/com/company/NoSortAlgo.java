@@ -12,17 +12,15 @@ public class NoSortAlgo {
             switch (nums[mid]) {
                 case 0 -> {
                     temp = nums[low];
-                    nums[low] = nums[mid];
-                    nums[mid] = temp;
-                    low++;
-                    mid++;
+                    nums[low++] = nums[mid];
+                    nums[mid++] = temp;
                 }
                 case 1 -> mid++;
                 case 2 -> {
                     temp = nums[mid];
                     nums[mid] = nums[high];
-                    nums[high] = temp;
-                    high--;
+                    nums[high--] = temp;
+
                 }
             }
         }

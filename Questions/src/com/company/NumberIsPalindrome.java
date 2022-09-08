@@ -20,6 +20,7 @@ public class NumberIsPalindrome {
 
         int x = 121;
         boolean y = reverseTheNumber(x);
+
         System.out.println(y);
     }
 }
