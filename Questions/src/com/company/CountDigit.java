@@ -24,6 +24,13 @@ public class CountDigit {
         System.out.println("Use of logarithm :- " + x);
     }
 
+    static int method4(int n) {
+        if (-10 < n && 10 > n) {
+            return 1;
+        }
+        return (method4(n / 10) + 1);
+    }
+
     public static void main(String[] args) {
         int n = 12345;
         //* Method 1
@@ -34,5 +41,9 @@ public class CountDigit {
 
         //* Method 3
         method3(n);
+
+        //* Method 4
+        int ans = method4(n);
+        System.out.println("Use of recursion :- " + ans);
     }
 }
