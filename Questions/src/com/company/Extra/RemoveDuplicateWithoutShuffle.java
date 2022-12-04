@@ -26,7 +26,6 @@ public class RemoveDuplicateWithoutShuffle {
 
     public static int method2(int[] nums) {
         int idx = 0;
-
         for (int i = 1; i < nums.length; i++) {
             if (nums[i] != nums[i - 1]) {
                 nums[idx++] = nums[i];
